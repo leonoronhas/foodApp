@@ -25,6 +25,9 @@ const MealsNavigator = createStackNavigator({
          headerStyle: {
             backgroundColor: Colors.primary,
          },
+         headerTitleStyle: {
+            fontFamily: 'roboto'
+         },
          headerTintColor: 'white'
       }
    });
