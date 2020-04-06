@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "Meal App",
     "slug": "my-food-app",
     "platforms": [
       "ios",
@@ -23,6 +23,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": ""
   }
 }
