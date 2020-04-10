@@ -1,4 +1,5 @@
 import React from 'react';
+import {useSelector, }  from 'react-redux';
 
 import { CATEGORIES, MEALS } from '../data/dummy-data';
 import MealList from '../components/MealList';
@@ -12,8 +13,12 @@ const CategoryMealScreen = props => {
 
    // retrieve data from previous screens
    const catId = props.navigation.getParam('categoryId');
+
+   // Get the filtered meals from redux using useSelector
+   const availableMeals = useSelector(state => state.meals.filteredMeals); // useSelector takes a function
+
    // retrieve data from the id selected 
-   const displayedMeals = MEALS.filter(meal => meal.categoryIds.indexOf(catId) >= 0);
+   const displayedMeals = availableMeals.filter(meal => meal.categoryIds.indexOf(catId) >= 0);
 
    return (
       <MealList listData={displayedMeals} navigation={props.navigation}/>
