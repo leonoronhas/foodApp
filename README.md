@@ -1,4 +1,4 @@
-My Food App
+# My Food App
 Hi! This is my food app where you can check food recipes and save your favorites! 
 The app has a filter feature where you can toggle to only see what works for you. 
 
