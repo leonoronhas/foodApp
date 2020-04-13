@@ -5,4 +5,4 @@ Made with React Native, the app is optimized for Android or iOS. More apps on th
 
 See a demo below
 
-![](guessApp(Ready).gif)
+![](mealApp.gif)
