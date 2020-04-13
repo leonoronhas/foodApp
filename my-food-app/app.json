@@ -13,7 +13,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#D32F2F"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -24,6 +24,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "description": "Learning by doing is the best way to retain knowledge. My meals app made following a wonderful React Native app is finally finished. More apps on the way!"
   }
 }
