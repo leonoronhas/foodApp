@@ -4,6 +4,8 @@ import { View, Text, StyleSheet, Switch } from 'react-native';
 import HeaderButton from '../components/HeaderButton';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import Colors from '../constants/Colors';
+import { useDispatch } from 'react-redux';
+import { setFilters } from '../store/actions/meals';
 
 
 const FilterSwitch = props => {
@@ -30,6 +32,8 @@ const FiltersScreen = props => {
    const [isVegan, setIsVegan] = useState(false);
    const [isVegetarian, setIsVegetarian] = useState(false);
 
+   const dispatch = useDispatch();
+
 const saveFilters = useCallback(() => {
    const appliedFilters={
       glutenFree: isGlutenFree,
@@ -37,8 +41,8 @@ const saveFilters = useCallback(() => {
       vegan: isVegan,
       vegetarian: isVegetarian
    };
-   console.log(appliedFilters);
-}, [isGlutenFree, isLactoseFree, isVegan, isVegetarian]);
+   dispatch(setFilters(appliedFilters));
+}, [isGlutenFree, isLactoseFree, isVegan, isVegetarian, dispatch]);
 
 // So we can navigate from our component to the navigation (line 94)
 useEffect(() => {
